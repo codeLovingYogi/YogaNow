@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ClassssesConfig(AppConfig):
-    name = 'classsses'
+class ClassesConfig(AppConfig):
+    name = 'classes'
