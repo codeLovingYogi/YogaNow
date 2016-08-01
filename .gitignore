@@ -1,3 +1,7 @@
 .DS_Store
 ghostdriver.log
 myvenv/
+__pycache__
+db.sqlite3
+*.py[co]
+secrets.py
