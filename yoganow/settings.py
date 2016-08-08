@@ -123,4 +123,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 try:
     from .secrets import *
 except ImportError:
-    SECRET_KEY=os.environ.get("MY_SECRET_KEY")
+    SECRET_KEY=os.environ["MY_SECRET_KEY"]
