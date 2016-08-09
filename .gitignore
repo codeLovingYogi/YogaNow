@@ -4,4 +4,5 @@ myvenv/
 __pycache__
 db.sqlite3
 *.py[co]
-secretsettings.py
+secret.py
+local.py

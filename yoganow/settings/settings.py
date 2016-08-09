@@ -118,6 +118,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 try:
-    from .secretsettings import *
+    from .local import *
 except ImportError:
-    SECRET_KEY=os.environ["MY_SECRET_KEY"]
+    from .prod import *
+
