@@ -1,15 +1,123 @@
-<!DOCTYPE HTML>
+{% load staticfiles %}
+
 <html>
 	<head>
 		<title>YogaNow</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- [if lte IE 8]><script src="{% static "assets/js/ie/html5shiv.js" %}"></script><![endif] -->
+		<link rel='stylesheet' type='text/css' href="{% static 'assets/css/main.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static "assets/css/ie9.css" %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static "assets/css/ie8.css" %}" /><![endif]-->
 	</head>
 	<body>
-		<h1>YogaNow</h1>
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header" class="alt">
+				<span class="logo"><img src="{% static "images/logo.png" %}" alt="YogaNow logo" /></span>
+				<h1>YogaNow</h1>
+				<p>Currently under development. <br> 
+					<a href="#contact">Send</a> a message to get updates!</p>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#search" class="active">Search for Yoga</a></li>
+					<li><a href="#classes">Yoga Classes</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<!-- Introduction -->
+				<section id="search" class="main">
+					<div class="spotlight">
+						<div class="content">
+							<header class="major">
+								<h2>Enter a location:</h2>
+							</header>
+							<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
+							adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
+							Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- First Section -->
+				<section id="classes" class="main special">
+					<header class="major">
+						<h2>Yoga Classes:</h2>
+					</header>
+					<ul class="features">
+						<li>
+							<span class="icon major style1 fa-code"></span>
+							<h3>Ipsum consequat</h3>
+							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+						</li>
+						<li>
+							<span class="icon major style3 fa-copy"></span>
+							<h3>Amed sed feugiat</h3>
+							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+						</li>
+						<li>
+							<span class="icon major style5 fa-diamond"></span>
+							<h3>Dolor nullam</h3>
+							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Get Started -->
+				<section id="about" class="main special">
+					<header class="major">
+						<h2>About</h2>
+						<p>Inspired from my travels, YogaNow helps you find yoga classes.</p>
+					</header>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<!-- <section id="contact">
+					<h2>Send a Message!</h2>
+					<form method="post" action="#">
+						<div class="field half first">
+							<input type="text" name="name" id="name" placeholder="Name" />
+						</div>
+						<div class="field half">
+							<input type="email" name="email" id="email" placeholder="Email" />
+						</div>
+						<div class="field">
+							<textarea name="message" id="message" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send" class="special" /></li>
+						</ul>
+					</form>
+				</section> -->
+				<section id="contact">
+					<h2>Connect</h2>
+					<dl class="alt">
+						<dt>Email</dt>
+						<dd><a href="mailto:felice@codelovingyogi.com">felice@codelovingyogi.com</a></dd>
+					</dl>
+				</section>
+				<p class="copyright">&copy; YogaNow<br>Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="{% static "assets/js/jquery.min.js" %}" ></script>
+		<script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+		<script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+		<script src="{% static "assets/js/skel.min.js" %}"></script>
+		<script src="{% static "assets/js/util.js" %}"></script>
+		<!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
+		<script src="{% static "assets/js/main.js" %}"></script>
 	</body>
 </html>
