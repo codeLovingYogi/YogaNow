@@ -1,0 +1,60 @@
+start:   6:45 AM
+end:   -  7:45 AM
+class:  All Levels - Donation Based
+teacher:  Dhyana Masla
+start:   4:30 PM
+end:   -  5:30 PM
+class:  All Levels
+teacher:  Pepper Monroe
+start:   7:00 PM
+end:   -  8:00 PM
+class:  Level 2/3
+teacher:  Nikki Lopez
+start:   6:45 AM
+end:   -  7:45 AM
+class:  All Levels - Donation Based
+teacher:  Aby Gonzales
+start:  12:00 PM
+end:   -  1:00 PM
+class:  All Levels - Donation-Based
+teacher:  Ira  Ruiz (sub for Syama Masla)
+start:   7:00 PM
+end:   -  8:00 PM
+class:  All Levels
+teacher:  Ira  Ruiz
+start:  12:00 PM
+end:   -  1:00 PM
+class:  All Levels - Donation Based
+teacher:  Netchem Hairston (sub for Syama Masla)
+start:  10:00 AM
+end:   - 11:00 AM
+class:  All Levels
+teacher:  Aby Gonzales
+start:   2:00 PM
+end:   -  4:00 PM
+class:  Stanton Street Women's Circle
+teacher:  Lauren Hemley
+start:   5:45 PM
+end:   -  6:45 PM
+class:  Stretch & Restore
+teacher:  Ella Bouriak
+start:  10:00 AM
+end:   - 11:00 AM
+class:  Level 1
+teacher:  Dhyana Masla
+start:   5:45 PM
+end:   -  6:30 PM
+class:  Meditation - Donation Based
+teacher:  Lauren Hemley (sub for Dhyana Masla)
+start:   8:15 PM
+end:   -  9:15 PM
+class:  Level 1
+teacher:  Patrice Caracci
+start:   9:00 AM
+end:   - 10:00 AM
+class:  Yoga Basics
+teacher:  Patrice Caracci
+start:   5:45 PM
+end:   -  6:45 PM
+class:  All Levels
+teacher:  Dhyana Masla
