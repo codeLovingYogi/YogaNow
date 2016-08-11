@@ -6,3 +6,6 @@ db.sqlite3
 *.py[co]
 secret.py
 local.py
+classes.html
+renderedschedule.html
+scrapeddata.txt
