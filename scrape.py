@@ -33,22 +33,25 @@ yoga_classes = soup.find_all('tr', {'class': 'odd'})
 yoga_classes2 = soup.find_all('tr', {'class': 'even'})
 
 # get information about each class
-results = []
-for i in range(len(yoga_classes)):
-	start_time = yoga_classes[i].find('span', {'class': 'hc_starttime'}).get_text()
-	results.append({'start': start_time})
-	
-	end_time = yoga_classes[i].find('span', {'class': 'hc_endtime'}).get_text()
-	results[i]['end'] = end_time
-	
-	description = yoga_classes[i].find('span', {'class': 'classname'}).get_text()
-	results[i]['description'] = description
-	
-	teacher = yoga_classes[i].find('span', {'class': 'trainer'}).get_text()
-	results[i]['teacher'] = teacher
-	
+def find_classes(classlist, resultlist):
+    for i in range(len(yoga_classes)):
+        start_time = yoga_classes[i].find('span', {'class': 'hc_starttime'}).get_text()
+        results.append({'start': start_time})
+        
+        end_time = yoga_classes[i].find('span', {'class': 'hc_endtime'}).get_text()
+        results[i]['end'] = end_time
+        
+        description = yoga_classes[i].find('span', {'class': 'classname'}).get_text()
+        results[i]['description'] = description
+        
+        teacher = yoga_classes[i].find('span', {'class': 'trainer'}).get_text()
+        results[i]['teacher'] = teacher
+    
+find_classes(yoga_classes, results)
+find_classes(yoga_classes2, results)
+
 print('num results: ', len(results))
 
 for j in range(len(results)):
-	for key, value in results[j].items():
-		print(key, ': ', value)	
+    for key, value in results[j].items():
+        print(key, ': ', value) 
