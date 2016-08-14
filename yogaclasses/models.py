@@ -1,16 +1,16 @@
 from django.db import models
 
 class Studio(models.Model):
-    sname = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.sname
+        return self.name
 
 class Teacher(models.Model):
-    tname = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.tname
+        return self.name
 
 class YogaClass(models.Model):
     studio = models.ForeignKey(Studio)
