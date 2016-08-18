@@ -36,7 +36,8 @@ yoga_classes2 = soup.find_all('tr', {'class': 'even'})
 def find_classes(classlist, resultlist):
     for i in range(len(classlist)):
         start_time = classlist[i].find('span', {'class': 'hc_starttime'}).get_text().strip()
-        end_time = classlist[i].find('span', {'class': 'hc_endtime'}).get_text().strip()
+        time = classlist[i].find('span', {'class': 'hc_endtime'}).get_text().strip()
+        end_time = re.search('[0-9]+.*', time).group(0)
         description = classlist[i].find('span', {'class': 'classname'}).get_text().strip()
         teacher = classlist[i].find('span', {'class': 'trainer'}).get_text().strip()
         resultlist.append({'start': start_time, 'end': end_time, 'description': description, 'teacher': teacher})
