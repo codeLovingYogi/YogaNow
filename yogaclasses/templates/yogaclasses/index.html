@@ -53,6 +53,11 @@
 					<header class="major">
 						<h2>Yoga Classes:</h2>
 					</header>
+					{% for yogaclass in yogaclasses %}
+    					<p>Studio: {{ yogaclass.studio }}<br>
+    						Teacher: {{ yogaclass.teacher }}<br>
+    						Class: {{ yogaclass.description }}</p>
+					{% endfor %}
 					<ul class="features">
 						<li>
 							<span class="icon major style1 fa-code"></span>

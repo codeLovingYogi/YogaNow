@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import Studio
+from .models import Teacher
+from .models import YogaClass
 
 def index(request):
-    return render(request, 'yogaclasses/index.html', {})
+    yogaclasses = YogaClass.objects.all()
+    return render(request, 'yogaclasses/index.html', {'yogaclasses': yogaclasses})
 
