@@ -59,10 +59,5 @@ class YogaClassScraper(object):
     def scrape(self):
         """Main method to start scraper and find yoga classes."""
         results = self.find_classes()
-        print('num results: ', len(results))
-
-        for j in range(len(results)):
-            for key, value in results[j].items():
-                print(key, ': ', value) 
-
         self.browser.quit()
+        return results

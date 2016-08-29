@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class Studio(models.Model):
     name = models.CharField(max_length=50)
@@ -16,7 +17,7 @@ class YogaClass(models.Model):
     studio = models.ForeignKey(Studio)
     teacher = models.ForeignKey(Teacher)
     description = models.CharField(max_length=100)
-    date = models.DateField()
+    date = models.DateField(default=datetime.now)
     start_time = models.TimeField(blank=True, null=True)
     end_time = models.TimeField(blank=True, null=True)
 
