@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- [if lte IE 8]><script src="{% static "assets/js/ie/html5shiv.js" %}"></script><![endif] -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 		<link rel='stylesheet' type='text/css' href="{% static 'assets/css/main.css' %}" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="{% static "assets/css/ie9.css" %}" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="{% static "assets/css/ie8.css" %}" /><![endif]-->
@@ -39,11 +40,17 @@
 					<div class="spotlight">
 						<div class="content">
 							<header class="major">
-								<h2>Enter a location:</h2>
+								<h2>Where are you?</h2>
 							</header>
-							<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-							adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-							Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+							<form class="form-inline" name="locationForm">
+								<fieldset class="form-group">
+									<label for="location"></label>
+									<input type="text" name="text" placeholder="Enter a location" required>
+								</fieldset>
+								<fieldset class="form-group">
+									<input type="submit" id ="submit" value="Find Classes">
+								</fieldset>
+							</form>
 						</div>
 					</div>
 				</section>
@@ -53,27 +60,15 @@
 					<header class="major">
 						<h2>Yoga Classes:</h2>
 					</header>
-					{% for yogaclass in yogaclasses %}
-    					<p>Studio: {{ yogaclass.studio }}<br>
-    						Teacher: {{ yogaclass.teacher }}<br>
-    						Class: {{ yogaclass.description }}</p>
-					{% endfor %}
 					<ul class="features">
-						<li>
-							<span class="icon major style1 fa-code"></span>
-							<h3>Ipsum consequat</h3>
-							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-						</li>
-						<li>
-							<span class="icon major style3 fa-copy"></span>
-							<h3>Amed sed feugiat</h3>
-							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-						</li>
-						<li>
-							<span class="icon major style5 fa-diamond"></span>
-							<h3>Dolor nullam</h3>
-							<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-						</li>
+						{% for yogaclass in yogaclasses %}
+							<li>
+								<span class="icon major style1 fa-code"></span>
+								<h3>Class: {{ yogaclass.description }} at {{ yogaclass.studio }}</h3>
+								<h4>Teacher: {{ yogaclass.teacher }}</h4>
+								<p>{{ yogaclass.start_time }} - {{ yogaclass.end_time }}</p>
+							</li>
+						{% endfor %}
 					</ul>
 				</section>
 
