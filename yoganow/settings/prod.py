@@ -3,4 +3,4 @@ from .settings import *
 
 DEBUG = False
 ALLOWED_HOSTS = ['*']
-SECRET_KEY=os.environ["MY_SECRET_KEY"]
+SECRET_KEY=os.environ["SECRET_KEY"]

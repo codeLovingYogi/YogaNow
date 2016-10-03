@@ -23,8 +23,8 @@ class Command(BaseCommand):
         teacher = 'Felice 2'
         description = 'Restorative2'
         class_date = datetime.date(2016, 8, 28)
-        class_start = '10:31:00'
-        class_end = '11:31:00'
+        class_start = '10:30:00'
+        class_end = '11:30:00'
 
         if not Studio.objects.filter(name=studio):
             s = Studio(name=studio)
