@@ -4,20 +4,23 @@ from scrape import YogaClassScraper
 
 import datetime
 
+studios = [{'studio': 'Stanton Street Yoga', 'link': 'http://www.stantonstreetyoga.com/classes/schedule/'}, 
+            {'studio': 'Jivamukti Yoga', 'link': 'http://www.jivamuktiyoga.nyc/schedule/'}]
 
 class Command(BaseCommand):
     help = 'Scrapes yoga classes data'
 
     def handle(self, *args, **options):
         self.stdout.write('\nScraping started at %s\n' % str(datetime.datetime.now()))
-        # s = YogaClassScraper()
-        # results = s.scrape()
+        for studio in studios:
+            link = studio['link']
+            s = YogaClassScraper(link)
+            results = s.scrape()
+            print('num results: ', len(results))
 
-        # print('num results: ', len(results))
-
-        # for j in range(len(results)):
-        #     for key, value in results[j].items():
-        #         print(key, ': ', value) 
+            for j in range(len(results)):
+                for key, value in results[j].items():
+                    print(key, ': ', value) 
 
         studio = 'Felice Yoga2'
         teacher = 'Felice 2'

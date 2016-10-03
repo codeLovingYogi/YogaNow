@@ -8,26 +8,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
-#link = 'http://www.stantonstreetyoga.com/classes/schedule/'
-link = 'http://www.jivamuktiyoga.nyc/schedule/'
 
-
-class YogaClassScraper(object):
+class YogaClassScraper:
 
     """Find yoga classes by scraping data from yoga studio schedules."""
     
-    def __init__(self):
+    def __init__(self, link):
         self.browser = webdriver.PhantomJS()
         # set the window size for screenshot
-        self.browser.set_window_size(1024, 768) 
+        self.browser.set_window_size(1024, 768)
+        self.link = link
     
     def find_classes(self):
         """Open page, feed HTML into BeautifulSoup, and find classes."""
-        self.browser.get(link)
+        self.browser.get(self.link)
         # wait for page to load schedule data
         wait = WebDriverWait(self.browser, 20)
         wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".healcode")))
-        self.browser.save_screenshot('schedule.png')
         # store list of classes
         results = []
         # parse html
