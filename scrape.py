@@ -32,18 +32,9 @@ class YogaClassScraper(object):
         results = []
         # parse html
         soup = BeautifulSoup(self.browser.page_source, "html.parser")
-        
+        today = soup.find_all('tr', {'data-hc-day': '1'})
         # get scheduling data
-        #schedule = soup.find('div', {'class': 'schedule'})
-        #print(schedule.prettify())
-        
-        # scrape list of classes based on mbo schedule data organized in odd/even rows
-        yoga_classes = soup.find_all('tr', {'class': 'odd'})
-        yoga_classes2 = soup.find_all('tr', {'class': 'even'})
-        # scrape details about each class
-        self.get_details(yoga_classes, results)
-        self.get_details(yoga_classes2, results)
-
+        self.get_details(today, results)
         return results
 
     def get_details(self, classlist, resultlist):
