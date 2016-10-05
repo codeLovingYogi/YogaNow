@@ -29,7 +29,7 @@ class YogaClassScraper:
         results = []
         # parse html
         soup = BeautifulSoup(self.browser.page_source, "html.parser")
-        today = soup.find_all('tr', {'data-hc-day': '1'})
+        today = soup.find_all('tr', {'data-hc-day': '2'})
         # get scheduling data
         self.get_details(today, results)
         return results
