@@ -22,5 +22,5 @@ class YogaClass(models.Model):
     end_time = models.TimeField(blank=True, null=True)
 
     def __str__(self):
-        return self.description
+        return '%s - %s - %s' % (self.studio, self.teacher, self.description)
 
