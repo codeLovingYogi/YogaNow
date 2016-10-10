@@ -1,5 +1,6 @@
 beautifulsoup4==4.5.0
 Django==1.9.8
+djangorestframework==3.4.7
 foursquare===1-2016.09.12
 requests==2.11.1
 selenium==2.53.6
