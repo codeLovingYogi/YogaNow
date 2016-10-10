@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Studio, Teacher, YogaClass
 from .serializers import StudioSerializer, TeacherSerializer, YogaClassSerializer
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 def index(request):
     yogaclasses = YogaClass.objects.all()
@@ -13,6 +13,7 @@ class StudioViewSet(viewsets.ModelViewSet):
     """
     queryset = Studio.objects.all()
     serializer_class = StudioSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 class TeacherViewSet(viewsets.ModelViewSet):
     """
@@ -20,6 +21,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
     """
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 class YogaClassViewSet(viewsets.ModelViewSet):
     """
@@ -27,3 +29,4 @@ class YogaClassViewSet(viewsets.ModelViewSet):
     """
     queryset = YogaClass.objects.all()
     serializer_class = YogaClassSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
