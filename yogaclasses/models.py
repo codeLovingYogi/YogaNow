@@ -14,8 +14,8 @@ class Teacher(models.Model):
         return self.name
 
 class YogaClass(models.Model):
-    studio = models.ForeignKey(Studio)
-    teacher = models.ForeignKey(Teacher)
+    studio = models.ForeignKey(Studio, related_name='yoga_classes')
+    teacher = models.ForeignKey(Teacher, related_name='yoga_classes')
     description = models.CharField(max_length=100)
     date = models.DateField(default=datetime.now)
     start_time = models.TimeField(blank=True, null=True)
